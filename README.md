@@ -1,17 +1,17 @@
 # PythonPyCurlAPIAutomation
 - Oggy the Python based API automation framework, XML based, non coding approach to automate APIs
 - This framework allows you to automate and execute API test cases without writing single line of code.
--------------------------------------------------
+
 ## Requirements
 - Python 2.7+
--------------------------------------------------
+
 ## Features
 - Specify your test cases in XML files
 - Automate more than one project APIs
 - HTML report, log generation
 - Generates automation template using simple command line option
 - In built report mailing mechanism
--------------------------------------------------------
+
 ## How to use it?
 1. Clone this repo using `git clone` command
 2. Run `build.sh` file, this will generate `.egg` file in `dist/` directory and will install it with required dependencies
@@ -30,13 +30,13 @@ Usage : oggy [Option] [Input]
 ```
 6. Execute `oggy --init` to create automation framework template
 7. Edit configuration files and get started
-----------------------------------------------------
+
 ## oggy --init
 This will create a framework folder structure with below directories
 - `reports` directory: will contain test case execution `.html` report with `.log file`; it will also save historical reports in this directory for future references
 - `test_data` directory: `assert_files` will contain files which you want to match directly e.g. download file match; `mail` directory allows you to specify report emailing SMTP details; `temp` is used by framework to store temp files while execution; `upload` to put upload test files; `yaml` test data variable values will be specified here
 - `test_scripts` directory: `project_info.xml` to specify project information; `api` contains API metadata information; `test_suites` contains test cases grouped under different files
---------------------------------
+
 ## Sample files
 ### project_info.xml
 ```xml
@@ -96,6 +96,6 @@ to_list: mail1@gmail.com,mail2@gmail.com
 from_email: sender@gmail.com
 from_password: password
 ```
------------------------------------
+
 ## Author
 [Vikas Sanap](https://www.linkedin.com/in/vikassanap/)
