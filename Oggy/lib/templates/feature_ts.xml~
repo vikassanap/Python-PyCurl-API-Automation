@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<testScenarios beforeAll = '' afterAll = '' beforeTest = '' afterTest = '' dataProvider = 'dp.csv' enableCookie='true/false'> 
+	<testCase testCaseId = 'test_case_id' name = 'test case title' projectId = 'project_id' apiId = 'api_id' group = 'group1,group2' before ='dependency_test_case' after = 'test_case_id' tag = 'tag1,tag2' extUrl = ''>
+		<request followRedirects= 'true/false'>	
+			<headers>
+				<header name ='header1' value = 'value1'/>
+				<header name ='headerN' value = 'value1'/>
+			</headers>
+			<body type = 'form'>
+				<parameter name = 'name1' type = 'file' value = 'value1'/>
+				<parameter name = 'name2' type = 'text' value = 'value2'/>
+			</body>
+			<body type = 'text'>
+				<parameter type = 'text'>text</parameter>
+				<parameter type = 'json'>text</parameter>
+				<parameter type = 'json'>json</parameter>
+				<parameter type = 'xml'>paste encoded xml here</parameter>
+				<parameter type = 'html'>paste encoded html here</parameter>
+			</body>
+		</request>
+		<response code = '200/500/400/302'>
+			<headers>
+				<header name ='header1' value = 'value1'/>
+				<header name ='headerN' value = 'value1'/>
+			</headers>
+			<extractHeader name = 'header_name'>$storevalueinthisvariable</extractHeader>
+			<assertHeaderValue name = 'header_name'>$expectedValue</assertHeaderValue>
+			<assertBodyValue type = 'json/xml/regx' path = '/user/id'>expected_value</assertBodyValue>
+			<extractBody type = 'json/xml/regx' path = '/user/id'>$storevalueinthisvariable</extractBody>
+			<body type = 'json' match = 'contains/matches'>value if small or file</body>
+			<body type = 'xml' match = 'contains/matches'>value if small or file</body>
+			<body type = 'html' match = 'contains/matches'>value if small or file</body>
+			<body type = 'text' match = 'contains/matches'>value if small or file</body>
+			<body type = 'file' match = 'nothing'>path to save file</body>
+		</response>
+	</testCase>
+</testScenarios>

@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<projectGroup>
+	<project id = 'Project_id' serviceType = 'http/http' baseUrl = 'host:port' name = 'Application_name'>
+		<defaultRequestHeaders>
+			<header name='header1' value = 'value'/>
+			<header name='headerN' value = 'value'/>
+		</defaultRequestHeaders>
+	</project>
+</projectGroup>
